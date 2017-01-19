@@ -37,9 +37,25 @@ public class JCPersonDisplay {
 
     public JCPersonDisplay (long seed) {
         initaliseLanguages();
+        setFont();
         this.person = new Person(seed);
-
         refreshText();
+    }
+
+    private void setFont () {
+        Font font = new Font("Courier", Font.PLAIN, 22);
+
+        lblLanguageTitle.setFont(font);
+        lblNameTitle.setFont(font);
+        lblCareerTitle.setFont(font);
+        lblCountryTitle.setFont(font);
+        lblGenderTitle.setFont(font);
+        lblFavColourTitle.setFont(font);
+        lblName.setFont(font);
+        lblCareer.setFont(font);
+        lblCountry.setFont(font);
+        lblGender.setFont(font);
+        lblFavColour.setFont(font);
     }
 
     private void refreshText() {

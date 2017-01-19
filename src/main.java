@@ -11,7 +11,7 @@ public class main {
 
 
         public static void main(String[] args) {
-            JApplet frame = new JApplet();
+            appletMain frame = new appletMain();
             frame.setContentPane(new JCPersonDisplay(new Random().nextLong()).getMainPanel());
             frame.setVisible(true);
     }
