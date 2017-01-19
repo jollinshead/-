@@ -28,30 +28,22 @@ public enum Colour implements Text {
         this.colourId = colourId;
     }
 
-    public String getColourId() { return this.colourId; }
+    public String getColourId() { return "0x" + this.colourId; }
 
     @Override
-    public String getEng() {
-        return english;
-    }
-
-    @Override
-    public String getJap() {
-        return japanese;
-    }
-
-    @Override
-    public String getHir() {
-        return hiragana;
-    }
-
-    @Override
-    public String getKat() {
-        return katakana;
-    }
-
-    @Override
-    public String getRoo() {
-        return roomaji;
+    public String getText(Language lang) {
+        switch(lang) {
+            case ENGLISH:
+                return this.english;
+            case JAPANESE:
+                return this.japanese;
+            case HIRAGANA:
+                return this.hiragana;
+            case KATAKANA:
+                return this.katakana;
+            case ROOMAJI:
+                return this.roomaji;
+        }
+        return this.english;
     }
 }
