@@ -5,7 +5,7 @@ package customclasses;
  */
 public enum Header implements Text {
 
-    NAME("Name", "名", "えいご", "メイ", "Mei"),
+    NAME("Name", "名", "めい", "メイ", "Mei"),
     FAV_COLOUR("Favourite Colour", "好きな色", "すきないろ", "スキナイロ", "Sukinairo"),
     GENDER("Gender", "性別", "せいべつ", "セイベツ", "Seibetsu"),
     COUNTRY("Country", "国", "くに", "クニ", "Kuni"),
