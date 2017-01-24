@@ -10,7 +10,8 @@ public enum Header implements Text {
     GENDER("Gender", "性別", "せいべつ", "セイベツ", "Seibetsu"),
     COUNTRY("Country", "国", "くに", "クニ", "Kuni"),
     OCCUPATION("Occupation", "職業", "しょくぎょお", "ショクギョウ", "Shokugyō"),
-    LANGUAGE("Language", "言語", "げんご", "ゲンゴ", "Gengo");
+    LANGUAGE("Language", "言語", "げんご", "ゲンゴ", "Gengo"),
+    OBJECT("Object", "オブジェクト", "おぶじぇくと", "オブジェクト", "Obujekuto");
 
     private final String english, japanese, hiragana, katakana, roomaji;
 

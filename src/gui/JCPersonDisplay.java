@@ -31,6 +31,8 @@ public class JCPersonDisplay {
     private JLabel lblLanguageTitle;
     private JLabel lblFavColour;
     private JButton btnNewPerson;
+    private JLabel lblObjectTitle;
+    private JLabel lblObject;
 
     private Language language = Language.ENGLISH;
     private Person person;
@@ -51,11 +53,13 @@ public class JCPersonDisplay {
         lblCountryTitle.setFont(font);
         lblGenderTitle.setFont(font);
         lblFavColourTitle.setFont(font);
+        lblObjectTitle.setFont(font);
         lblName.setFont(font);
         lblCareer.setFont(font);
         lblCountry.setFont(font);
         lblGender.setFont(font);
         lblFavColour.setFont(font);
+        lblObject.setFont(font);
     }
 
     private void refreshText() {
@@ -65,12 +69,14 @@ public class JCPersonDisplay {
         lblCountryTitle.setText(Header.COUNTRY.getText(language));
         lblGenderTitle.setText(Header.GENDER.getText(language));
         lblFavColourTitle.setText(Header.FAV_COLOUR.getText(language));
+        lblObjectTitle.setText(Header.OBJECT.getText(language));
         lblName.setText(person.getName().getText(language));
         lblCareer.setText(person.getCareer().getText(language));
         lblCountry.setText(person.getCountry().getText(language));
         lblGender.setText(person.getPortrait().getGender().getText(language));
         lblFavColourIcon.setBackground(Color.decode(person.getFavourateColour().getColourId()));
         lblFavColour.setText(person.getFavourateColour().getText(language));
+        lblObject.setText(person.getObject().getText(language));
         InputStream imgStream = getClass().getResourceAsStream(person.getPortrait().getImagePath());
         if (imgStream == null)
             lblPortrait.setText("?");

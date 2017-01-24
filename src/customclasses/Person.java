@@ -16,6 +16,7 @@ public class Person {
     private Name name;
     private Colour favourateColour;
     private Country country;
+    private Object object;
 
     public Portrait getPortrait() {
         return portrait;
@@ -37,6 +38,10 @@ public class Person {
         return country;
     }
 
+    public Object getObject() {
+        return object;
+    }
+
     public Person(long seed) {
         generator = new Random(seed);
 
@@ -44,7 +49,8 @@ public class Person {
         this.career = getRandom(Career.class, false);
         this.name = getRandom(Name.class, false);
         this.favourateColour = getRandom(Colour.class, false);
-        this.country = getRandom(Country.class, true);
+        this.country = getRandom(Country.class, false);
+        this.object = getRandom(Object.class, false);
     }
 
     private <E extends Enum<E>> E getRandom(Class<E> eClass, boolean excludeFinalValue)
